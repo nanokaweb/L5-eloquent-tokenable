@@ -23,7 +23,7 @@ trait Tokenable {
     /**
      * @return string
      */
-    public function getTokenAttribute()
+    public function getHashidAttribute()
     {
         $hashids = $this->getHashingInstance();
         return $hashids->encode($this->id);
@@ -31,13 +31,13 @@ trait Tokenable {
 
     /**
      * @param $query
-     * @param $token
+     * @param $hashid
      * @return bool|int
      */
-    public function scopeWhereToken($query, $token)
+    public function scopeWhereHashid($query, $hashid)
     {
         $hashids = $this->getHashingInstance();
-        $id = $hashids->decode($token);
+        $id = $hashids->decode($hashid);
 
         if(count($id) == 0)
             return false;
