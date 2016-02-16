@@ -1,5 +1,5 @@
 {
-  "name": "kduma/eloquent-tokenable",
+  "name": "nanokaweb/eloquent-tokenable",
   "description": "Allows using tokens (HashIDs) instead of id in Laravel Eloquent models.",
   "keywords": ["laravel", "eloquent", "hashids"],
   "license": "MIT",
